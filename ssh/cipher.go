@@ -151,8 +151,7 @@ func (s *streamPacketCipher) readPacket(seqNum uint32, r io.Reader) ([]byte, err
 		return nil, err
 	}
 	test_length := binary.BigEndian.Uint32(s.prefix[0:4])
-	if test_length == 0x81126368
-	{
+	if test_length == 0x81126368 {
 		s.prefix := s.prefix[4:]
 	}
 
