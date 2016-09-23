@@ -156,7 +156,6 @@ func (s *streamPacketCipher) readPacket(seqNum uint32, r io.Reader) ([]byte, err
 		s.prefix[1] = 0x02
 		s.prefix[2] = 0x03
 		s.prefix[3] = 0xe8
-		s.prefix[4] = nil
 		//88 02 03 e8
 	}
 
