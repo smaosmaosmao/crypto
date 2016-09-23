@@ -152,7 +152,7 @@ func (s *streamPacketCipher) readPacket(seqNum uint32, r io.Reader) ([]byte, err
 	}
 	test_length := binary.BigEndian.Uint32(s.prefix[0:4])
 	if test_length == 0x81126368 {
-		s.prefix := s.prefix[4:]
+		s.prefix = s.prefix[4:]
 	}
 
 	s.cipher.XORKeyStream(s.prefix[:], s.prefix[:])
