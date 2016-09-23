@@ -16,6 +16,7 @@ import (
 	"hash"
 	"io"
 	"io/ioutil"
+	"strconv"
 )
 
 const (
