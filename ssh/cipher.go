@@ -169,8 +169,8 @@ func (s *streamPacketCipher) readPacket(seqNum uint32, r io.Reader) ([]byte, err
 	}
 
 	if length > maxPacket {
-		ta := strconv.Itoa(length)
-		tb := strconv.Itoa(maxPacket)
+		ta := strconv.Itoa(int(length))
+		tb := strconv.Itoa(int(maxPacket))
 		return nil, errors.New("ssh2: invalid packet length, packet too large length:"+ ta + " maxPacket:" + tb)
 	}
 
